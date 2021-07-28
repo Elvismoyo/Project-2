@@ -1,0 +1,526 @@
+/*Contents at the top*/
+body{
+    background-color: #ecebbd;
+
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+
+}
+
+.img-logo{
+    border: 2px solid #808000;
+    border-radius: 20px;
+    height: 50%;
+    width: 10%;
+
+    min-width: 10%;
+    min-height: 50%;
+    margin-left: 30px;
+}
+.main-logo{
+    height: 100%;
+    width: 100%;
+    animation: shrink-logo 2s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes shrink-logo {
+    from{
+        transform: scale(.8);
+    }
+    to{
+        transform: scale(1.2);
+    }
+    
+}
+
+
+.main-title{
+    font-family: nice-font;
+    font-size: 70px;
+    color: #808000;
+    font-weight: lighter;
+}
+
+.main-subtitle, .main-title{
+    margin-left: 70px;
+}
+
+@font-face {
+    font-family: nice-font;
+    src: url(Lobster-Regular.ttf);
+}
+
+/*Intro Block 1*/
+
+
+
+.slide-container{
+    height: 90px;
+    overflow: hidden;
+}
+
+.slide-wrapper{
+    width: 300%;
+    height: 90px;
+    display: flex;
+    text-align: center;   
+    animation: slide-move 18s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slide-move {
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: -200%;
+    }
+    
+}
+.slide-1-text{
+    font-weight: bold;
+    font-size: 30px;    
+}
+.slide{
+    width: 100%;
+    height: 100%;
+}
+
+.slide-1{
+    background-color: #bdb76b;
+}
+
+.slide-2{
+    background-color: #867e36;
+}
+
+.slide-3{
+    background-color: #737000;
+}
+
+
+.intro-img-container{
+    background-image: url("../imgs/intro_img2.jpg");
+    background-size: 100% 100%;
+  
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vh;
+}
+
+.intro-text-container{
+    height: 90%;
+    width:  50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text-1{
+    width: 60%;
+    border: 5px solid white;
+    background-color: lightgray;
+    padding: 30px 70px;
+}
+
+.intro-text-1, .intro-text-2, .intro-text-3{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+
+}
+/*Making content resposive in intro block-1*/
+@media screen and(max-width: 800px){
+    .slide-container{
+        height: 100px;
+        
+    }
+    .slide-wrapper{
+        height: 100px;
+    
+    }
+ 
+
+}
+@media screen and (max-width: 800px) {
+    .intro-text-1, .intro-text-2, .intro-text-3 {
+      font-size: 10px;
+      padding: 5px 5px !important;
+      width: 80%;
+    }
+  }
+
+/*Intro Block 2*/
+
+.intro-block-2{
+    display: flex;
+  
+    justify-content: space-around;
+    height: 40vh;
+    padding: 40px;
+}
+
+.img-block-2{
+    background-image: url("../imgs/intro_img1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    object-fit: cover;
+}
+.img-block-2::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+.intro-text-2{
+    position: absolute;
+    width: 60%;
+    border: 5px solid skyblue;
+    color:black;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.intro-text-3{
+    width: 40%;
+    height: auto;
+    background-color: #faf0e6;
+    padding: 20px 20px;
+    border: 3px solid gray;
+
+}
+
+/* Intro Block 3 */
+
+.intro-block-3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.block-line-breaker{
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.block-title{
+
+    margin-left: 3%;
+}
+
+
+.product-container-1, .product-container-2, .product-container-3{
+    margin-top: 50px;
+    width: 100%;
+    
+}
+
+.img-item1, .img-item2, .img-item3{
+    width: auto;
+    height: 100%;
+    
+}
+
+.ritual-title{
+    color: #808000;
+    font-size: 30px;
+    font-weight: bolder;
+}
+/* Modal Windows */
+.modal-window1:not(:target), .modal-window2:not(:target), .modal-window3:not(:target){
+    opacity: 0;
+    display: none;
+    pointer-events: auto;
+}
+.modal-window1, .modal-window2, .modal-window3{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(211,211,211, .8);
+    z-index: 1;
+}
+
+.modal-product{
+    margin-top: 10px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    
+    
+}
+
+.modal-added-to{
+   
+    display: flex;
+    justify-content: center;
+}
+.modal-added-title{
+
+    width: 80%;
+    padding: 5px 5px;
+   
+    text-align: start;
+}
+
+.modal-line-breaker{
+  
+    border: 2px solid #d3d3d3;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.modal-window1{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.modal1-img{
+
+    width: 70%;
+}
+
+.modal1-container{
+    margin-top: 5%;
+    width: 40%;
+    position: relative;
+    height: 55%;
+    background-color: white;
+    
+}
+
+.modal-product-info{
+    padding: 10px 10px;
+    width: 60%;
+    word-wrap: break-word;
+    text-align: start;
+}
+
+.btn-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+.modal-description-container{
+    display: flex;
+    justify-content: center;
+    background-color: #d3d3d3;
+}
+a{
+    text-decoration: none;
+}
+.modal-description-line-breaker{
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    width: auto;
+
+}
+.modal-description{
+ 
+    word-wrap: break-word;
+    text-align: start;
+    width: 76%
+}
+
+.btn-continue{
+    background-color: white;
+    border-radius: 5px;
+    padding: 6px 4px;
+}
+
+/* Block 4 */
+.intro-block-4{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.liquid-volume, .price{
+    font-size: 20px;
+    width: 65%;
+    margin-left: 18%;
+}
+
+.btns-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 8%;
+}
+
+a{
+    border-radius: 10px;;
+}
+.btn-shopping{
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+ 
+}
+
+.btn-add-to{
+    color: white;
+    background-color: black;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 10px;
+    
+}
+
+.btn-add-to:hover{
+    background-color: rgba(0,0,0,0.75);
+    
+}
+
+.add-bag, .add-shopping{
+    width: fit-content;
+}
+
+.add-shopping:not(:hover){
+    visibility: hidden;
+}
+
+.add-bag:hover ~ .add-shopping{
+
+    animation: btn-down .5s linear forwards;
+    animation-fill-mode: forwards;
+}
+
+.btn-shopping:hover{
+  background-color: rgba(0,0,0,0.75);;
+}
+@keyframes btn-down{
+
+    from{
+    visibility: visible;
+    margin-left: -50%;
+   
+
+    }
+    to{
+    visibility: visible;
+    margin-left: 0%;
+    }
+    
+}
+.product-container-4, .product-container-5, .product-container-6{
+    width: 100%;
+    margin-bottom: 50px;
+}
+/* Footer */
+
+
+.footer{
+
+    margin-top: 50px;
+    width: 90%;
+    margin: auto;  
+    height: 50vh; 
+    background-color: black;
+    position: relative;
+    z-index: 0;
+}
+
+.footer-info-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.footer-info{
+    text-align: center;
+}
+
+.footer-info-title, .footer-subtitle{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-line-breaker{
+    width: 90%;
+    background-color: #f8f8ff;
+    border: 2px solid #f8f8ff;
+    border-radius: 5px;
+}
+
+.footer-social-media-title-container{
+    text-align: end;
+}
+.footer-social-media-title{
+    margin-top: 3%;
+    color: #f8f8ff;
+    margin-right: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.footer-social-media-icons{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3.5%;
+}
+
+.icons{
+   width: 50px;
+    
+}
+
+.footer-last-info-container{
+    display: flex;
+    justify-content: center;    
+}
+
+
+
+.footer-last-info{
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.last-info{
+    color: white;
+    text-align: center;
+   
+}
+
+.icon-container{
+    border-radius: 50%;
+    margin: 10px;
+    margin-right: 3%;
+}
